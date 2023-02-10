@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with JohnDoe landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Mr. Junaid</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- Bootstrap + JohnDoe main styles -->
+	
+    <link rel="stylesheet" href="{% static 'css/johndoe.css' %}">
+    
+    
+    <script>
+        #square-buttons {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%
+            }
+           
+    </script>
+    <script src="https://cdn.tiny.cloud/1/2po0qoooolwsn0d52l5pd7gfzhu09q05dh4atcl46ozt51bw/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <header class="header">
+        <div class="container">
+            <ul class="social-icons pt-3">
+                <li class="social-item"><a class="social-link text-light" href="https://www.facebook.com/profile.php?id=100078055135167&mibextid=ZbWKwL"><i class="ti-facebook" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="https://twitter.com/Muhamma50603666?t=eQ2qPIpTG6ceefV0d55lUw&s=09"><i class="ti-twitter" aria-hidden="true"></i></a></li> 
+                <li class="social-item"><a class="social-link text-light" href="https://www.instagram.com/junaidali1559/"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEhcqZyr2HxEQAAAYYtIt0oPddWDre0cj1nmBJ60sA94QpGRvtsnboKLNx12IeEhdhSa-TvVgRv-tAwxof2cTUvHAQsHp4CJCUlG-afdYIWqhtfPkKXMU7hbIfGqKYizAQkp8s=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmuhammad-junaid-920497260"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+            </ul>  
+            <div class="header-content">
+                <h4 class="header-subtitle" >Hello, I am</h4>
+                <h3 class="header-title"  ><span class="demo1"></span></h3>
+                <h6 class="header-mono" id="text"></h6>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                <script>
+                    var typed1 = new Typed(".demo1",{
+                        strings:["Mr. Junaid","Data Analyst","Developer","Coder", "Freelancer"],
+                        typeSpeed:150,
+                        backSpeed:150,
+                        loop: true
+                    })
+                </script>
+                    <script>
+                        var j = 0;
+                        var text = 'Frontend Designer | Backend Python Developer';
+                        var sp = 100;
+                        
+                        function typing() {
+                          if (j < text.length) {
+                            document.getElementById("text").innerHTML += text.charAt(j);
+                            j++;
+                            setTimeout(typing, sp);
+                          }
+                        }
+                        typing();
+                    </script>
+                <button class="btn btn-primary btn-rounded" onclick="printJS('{% static 'media/CV-1.pdf'%}')"><i class="ti-printer pr-2"></i>Print Resume</button>
+            </div>
+        </div>
+    </header>
+
